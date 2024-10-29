@@ -1,7 +1,9 @@
 # be-ios-lunchify
+
 This project is to show working knowledge of the development of ios application - this is BE side.
 
 # MongoDB local setup
+
 First you will need to install docker and mongodb on your local machine
 
 ```
@@ -16,4 +18,20 @@ docker container ls
 
 Install the mongosh package!
 brew install mongosh
+```
+
+# Reference links for development
+
+```
+## Spring boot with mongodb
+https://docs.spring.io/spring-data/mongodb/reference/mongodb/template-api.html
+
+## Services top-level elements
+https://docs.docker.com/reference/compose-file/services/
+
+## Docker Samples GitHub repo
+https://github.com/dockersamples?q=&type=all&language=&sort=stargazers
+
+## Docker quick start
+https://docs.docker.com/compose/gettingstarted/
 ```

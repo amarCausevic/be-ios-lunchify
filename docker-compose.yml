@@ -1,0 +1,14 @@
+services:
+  db:
+    container_name: mongo-lunchify-dev
+    image: mongo:latest
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=pass
+      - MONGO_INITDB_DATABASE=lunchDb
+    ports:
+      - '27017:27017'
+    volumes:
+      - ./data:/data/db
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
