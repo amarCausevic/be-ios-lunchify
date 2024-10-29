@@ -20,6 +20,25 @@ Install the mongosh package!
 brew install mongosh
 ```
 
+# Run docker-compose.yml
+
+* To run this project you will need to setup mongo database via docker. It is important for you to
+  have mongo installed on your local machine.
+* You will need to create .env file in the root of the project and paste all properties from
+  .env-example and setup your own user and database name
+* Run commands for docker:
+
+```
+## Docker compose to run up all volumes and also mongo-init.js
+docker compose -f docker-compose.yml up -d
+
+## Remove docker container and all of data
+docker compose down -v
+```
+
+* Picture below is showing how docker compose file was set up
+  ![img.png](readme-assets/img.png)
+
 # Reference links for development
 
 ```
