@@ -39,6 +39,12 @@ docker compose down -v
 * Picture below is showing how docker compose file was set up
   ![img.png](readme-assets/img.png)
 
+# Run spring boot
+
+```
+mvn -Denvironment=LOCAL spring-boot:run
+```
+
 # Reference links for development
 
 ```
