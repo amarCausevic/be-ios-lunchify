@@ -38,7 +38,7 @@ public class LunchifyApplication {
 
     // Create a new client and connect to the servers
     try (MongoClient mongoClient = MongoClients.create(settings)) {
-      MongoDatabase database = mongoClient.getDatabase("lunchify");
+      MongoDatabase database = mongoClient.getDatabase("lunchify-db");
 
       try {
         // Send a ping to confirm a successful connection
