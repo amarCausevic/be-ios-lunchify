@@ -29,17 +29,16 @@ public class LunchifyApplication {
 
     SpringApplication.run(LunchifyApplication.class, args);
 
-    ServerApi serverApi = ServerApi.builder()
-        .version(ServerApiVersion.V1)
-        .build();
+    ServerApi serverApi = ServerApi.builder().version(ServerApiVersion.V1).build();
+
     MongoClientSettings settings = MongoClientSettings.builder()
         .applyConnectionString(new ConnectionString(uri))
         .serverApi(serverApi)
         .build();
 
-    // Create a new client and connect to the server
+    // Create a new client and connect to the servers
     try (MongoClient mongoClient = MongoClients.create(settings)) {
-      MongoDatabase database = mongoClient.getDatabase("admin");
+      MongoDatabase database = mongoClient.getDatabase("lunchify");
 
       try {
         // Send a ping to confirm a successful connection
