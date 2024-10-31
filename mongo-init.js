@@ -1,13 +1,15 @@
 try {
   console.log("INITIALIZE DATABASE");
+  db.getSiblingDB('lunchify-admin');
+  console.log("SWITCHING TO DATABASE: ", db);
   db.createUser(
           {
-              user: "cmar",
-              pwd: "cmarIsYou",
+              user: "lunchify-admin",
+              pwd: "pass",
               roles: [
                   {
                       role: "readWrite",
-                      db: "lunch"
+                      db: "lunchify-db"
                   }
               ]
           }
@@ -58,7 +60,6 @@ try {
       userComment: "Can I get the re-heated one"
     }
   );
-
 } catch (error) {
   console.error(error);
 }

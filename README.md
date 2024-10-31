@@ -45,6 +45,24 @@ docker compose down -v
 mvn -Denvironment=LOCAL spring-boot:run
 ```
 
+# Errors during development
+
+## User cannot retrieve information from database
+
+```
+com.mongodb.MongoCommandException: Command failed with error 13 (AuthenticationFailed): 'Authentication failed.' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "Authentication failed.", "code": 13, "codeName": "AuthenticationFailed"}
+```
+
+You need to add spring data properties to application.properties file:
+
+```
+spring.data.mongodb.host=localhost
+spring.data.mongodb.port=27017
+spring.data.mongodb.database=<created_database_by_you>
+spring.data.mongodb.username=<username_defined_in_mongo-init.js_file>
+spring.data.mongodb.password=<username_defined_in_mongo-init.js_file>
+```
+
 # Reference links for development
 
 ```
