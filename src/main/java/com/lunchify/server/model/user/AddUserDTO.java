@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @AllArgsConstructor
 @NoArgsConstructor
 @Document(collection = "users")
-public class AddUserDTO extends UserDTO {
+public class AddUserDTO {
 
   private String name;
   private String displayName;

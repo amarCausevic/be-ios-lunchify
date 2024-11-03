@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface UserServiceI {
 
-  UserDTO addUser(AddUserDTO addUserDTO);
+  AddUserDTO addUser(AddUserDTO addUserDTO);
 
   List<UserDTO> getUsers();
 

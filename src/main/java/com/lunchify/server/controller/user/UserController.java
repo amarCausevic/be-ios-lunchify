@@ -1,6 +1,7 @@
 package com.lunchify.server.controller.user;
 
 import com.lunchify.server.model.user.AddUserDTO;
+import com.lunchify.server.model.user.DeleteUserDTO;
 import com.lunchify.server.model.user.UserDTO;
 import com.lunchify.server.service.user.UserServiceI;
 import java.util.List;
@@ -24,8 +25,8 @@ public class UserController {
   UserServiceI userService;
 
   @PostMapping
-  public ResponseEntity<UserDTO> addUser(@RequestBody AddUserDTO userRequestBody) {
-    return new ResponseEntity<UserDTO>(userService.addUser(userRequestBody), HttpStatus.CREATED);
+  public ResponseEntity<AddUserDTO> addUser(@RequestBody AddUserDTO userRequestBody) {
+    return new ResponseEntity<AddUserDTO>(userService.addUser(userRequestBody), HttpStatus.CREATED);
   }
 
   @GetMapping
@@ -46,8 +47,10 @@ public class UserController {
   }
 
   @DeleteMapping("{id}")
-  public ResponseEntity<String> deleteUser(@PathVariable("id") String id) {
+  public ResponseEntity<DeleteUserDTO> deleteUser(@PathVariable("id") String id) {
     userService.deleteUser(id);
-    return new ResponseEntity<String>("User has been deleted Successfully.", HttpStatus.OK);
+    return new ResponseEntity<DeleteUserDTO>(
+        new DeleteUserDTO("CRUD Delete User", "User has been successfully delete from database"),
+        HttpStatus.OK);
   }
 }
