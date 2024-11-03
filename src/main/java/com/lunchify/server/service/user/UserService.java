@@ -2,12 +2,12 @@ package com.lunchify.server.service.user;
 
 import com.lunchify.server.model.user.AddUserDTO;
 import com.lunchify.server.model.user.UserDTO;
+import com.lunchify.server.repository.AddUserRepository;
 import com.lunchify.server.repository.UserRepository;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class UserService implements UserServiceI {
@@ -15,10 +15,12 @@ public class UserService implements UserServiceI {
   @Autowired
   private UserRepository userRepository;
 
+  @Autowired
+  private AddUserRepository addUserRepository;
+
   @Override
-  @Transactional
-  public UserDTO addUser(AddUserDTO addUserDTO) {
-    return userRepository.save(addUserDTO);
+  public AddUserDTO addUser(AddUserDTO addUserDTO) {
+    return addUserRepository.save(addUserDTO);
   }
 
   @Override
