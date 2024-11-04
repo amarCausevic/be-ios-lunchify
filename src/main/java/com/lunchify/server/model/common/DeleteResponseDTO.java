@@ -1,4 +1,4 @@
-package com.lunchify.server.model.user;
+package com.lunchify.server.model.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class DeleteUserDTO {
+public class DeleteResponseDTO {
 
   private String msg;
   private String description;
