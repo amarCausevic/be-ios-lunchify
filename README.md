@@ -1,6 +1,6 @@
 # be-ios-lunchify
 
-This project is to show working knowledge of the development of ios application - this is BE side.
+Backend side fro Luchify project - Using Java Springboot framework with MongoDB.
 
 # MongoDB local setup
 
