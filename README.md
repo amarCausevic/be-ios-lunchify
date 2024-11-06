@@ -4,7 +4,7 @@ Backend side for Luchify project - Using Java Springboot framework with MongoDB.
 
 # MongoDB local setup
 
-First you will need to install docker and mongodb on your local machine
+First you will need to install docker and mongodb on your local machine.
 
 ```
 Pull the MongoDB Docker Image!
