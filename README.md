@@ -1,6 +1,6 @@
 # be-ios-lunchify
 
-Backend side for Luchify project - Using Java Springboot framework with MongoDB.
+Backend side for Luchify project - Using Java Springboot framework with MongoDB!
 
 # MongoDB local setup
 
